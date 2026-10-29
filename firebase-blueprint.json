@@ -1,0 +1,216 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile and workspace preferences without raw PII",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "photoURL": { "type": "string", "maxLength": 500 },
+        "theme": { "type": "string", "enum": ["dark", "light"], "maxLength": 10 },
+        "language": { "type": "string", "enum": ["en", "ha"], "maxLength": 10 },
+        "defaultModel": { "type": "string", "maxLength": 80 },
+        "customInstructions": { "type": "string", "maxLength": 2000 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "displayName", "theme", "defaultModel", "createdAt", "updatedAt"]
+    },
+    "UserPrivateInfo": {
+      "title": "UserPrivateInfo",
+      "description": "Isolated PII record for user email and phone metadata",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "email": { "type": "string", "maxLength": 254 },
+        "authProvider": { "type": "string", "maxLength": 50 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "authProvider", "createdAt", "updatedAt"]
+    },
+    "Conversation": {
+      "title": "Conversation",
+      "description": "Saved AI chat conversation metadata",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "model": { "type": "string", "maxLength": 80 },
+        "archived": { "type": "boolean" },
+        "messageCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "title", "model", "archived", "messageCount", "createdAt", "updatedAt"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "Individual message inside a conversation subcollection",
+      "type": "object",
+      "properties": {
+        "conversationId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "userId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "role": { "type": "string", "enum": ["user", "assistant", "system"], "maxLength": 20 },
+        "content": { "type": "string", "minLength": 1, "maxLength": 50000 },
+        "model": { "type": "string", "maxLength": 80 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["conversationId", "userId", "role", "content", "model", "createdAt", "updatedAt"]
+    },
+    "MasterPrompt": {
+      "title": "MasterPrompt",
+      "description": "Reusable Master Prompt workflow template saved by a user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "description": { "type": "string", "maxLength": 500 },
+        "category": { "type": "string", "maxLength": 80 },
+        "promptText": { "type": "string", "minLength": 1, "maxLength": 30000 },
+        "outputLanguage": { "type": "string", "maxLength": 60 },
+        "outputType": { "type": "string", "maxLength": 80 },
+        "targetPlatform": { "type": "string", "maxLength": 80 },
+        "desiredLength": { "type": "string", "maxLength": 60 },
+        "characterLimit": { "type": "integer" },
+        "exactCharCount": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "name", "description", "category", "promptText", "outputLanguage", "outputType", "targetPlatform", "desiredLength", "characterLimit", "exactCharCount", "createdAt", "updatedAt"]
+    },
+    "GeneratedImageRecord": {
+      "title": "GeneratedImageRecord",
+      "description": "Metadata record of an AI generated image or media item",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "prompt": { "type": "string", "minLength": 1, "maxLength": 4000 },
+        "model": { "type": "string", "maxLength": 80 },
+        "aspectRatio": { "type": "string", "maxLength": 20 },
+        "imageSize": { "type": "string", "maxLength": 20 },
+        "mediaType": { "type": "string", "enum": ["image", "video", "audio"], "maxLength": 20 },
+        "previewData": { "type": "string", "maxLength": 800000 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "prompt", "model", "aspectRatio", "imageSize", "mediaType", "previewData", "createdAt"]
+    },
+    "UsageRecord": {
+      "title": "UsageRecord",
+      "description": "Per-user usage tracking counter record",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "textRequests": { "type": "integer" },
+        "imageGenerations": { "type": "integer" },
+        "voiceRequests": { "type": "integer" },
+        "videoGenerations": { "type": "integer" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "textRequests", "imageGenerations", "voiceRequests", "videoGenerations", "updatedAt"]
+    },
+    "ProviderConfig": {
+      "title": "ProviderConfig",
+      "description": "Administrator AI provider configuration metadata (no secrets)",
+      "type": "object",
+      "properties": {
+        "providerId": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "enabled": { "type": "boolean" },
+        "dailyTextLimit": { "type": "integer" },
+        "dailyImageLimit": { "type": "integer" },
+        "updatedBy": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["providerId", "displayName", "enabled", "dailyTextLimit", "dailyImageLimit", "updatedBy", "updatedAt"]
+    },
+    "AdminRecord": {
+      "title": "AdminRecord",
+      "description": "Trusted administrator lookup document",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "grantedBy": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "grantedBy", "createdAt"]
+    },
+    "PromptTransformation": {
+      "title": "PromptTransformation",
+      "description": "Saved Universal Master Prompt Transformation record",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "originalMasterPrompt": { "type": "string", "minLength": 1, "maxLength": 30000 },
+        "newIdea": { "type": "string", "minLength": 1, "maxLength": 5000 },
+        "additionalInstructions": { "type": "string", "maxLength": 5000 },
+        "transformationMode": { "type": "string", "maxLength": 60 },
+        "outputLanguage": { "type": "string", "maxLength": 80 },
+        "finalMasterPrompt": { "type": "string", "minLength": 1, "maxLength": 30000 },
+        "changeSummary": { "type": "string", "maxLength": 10000 },
+        "validationResults": { "type": "string", "maxLength": 5000 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "userId",
+        "title",
+        "originalMasterPrompt",
+        "newIdea",
+        "additionalInstructions",
+        "transformationMode",
+        "outputLanguage",
+        "finalMasterPrompt",
+        "changeSummary",
+        "validationResults",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User workspace settings and display profile"
+    },
+    "/users/{userId}/private/{docId}": {
+      "schema": { "$ref": "#/entities/UserPrivateInfo" },
+      "description": "Isolated PII storage for user email and auth provider"
+    },
+    "/conversations/{conversationId}": {
+      "schema": { "$ref": "#/entities/Conversation" },
+      "description": "User chat conversations"
+    },
+    "/conversations/{conversationId}/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/Message" },
+      "description": "Messages belonging to a specific conversation"
+    },
+    "/prompts/{promptId}": {
+      "schema": { "$ref": "#/entities/MasterPrompt" },
+      "description": "Saved reusable Master Prompts"
+    },
+    "/prompt_transformations/{transformationId}": {
+      "schema": { "$ref": "#/entities/PromptTransformation" },
+      "description": "Saved Universal Master Prompt Transformations"
+    },
+    "/generated_images/{imageId}": {
+      "schema": { "$ref": "#/entities/GeneratedImageRecord" },
+      "description": "Saved generated images and media history"
+    },
+    "/usage_records/{userId}": {
+      "schema": { "$ref": "#/entities/UsageRecord" },
+      "description": "Per-user AI usage statistics"
+    },
+    "/provider_configs/{providerId}": {
+      "schema": { "$ref": "#/entities/ProviderConfig" },
+      "description": "Admin-managed AI provider settings"
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/AdminRecord" },
+      "description": "Trusted administrator UIDs"
+    }
+  }
+}

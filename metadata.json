@@ -1,0 +1,6 @@
+{
+  "name": "MUSTAPHA AI PROMPT",
+  "description": "A full-stack, multi-model AI assistant and Master Prompt engineering workspace.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

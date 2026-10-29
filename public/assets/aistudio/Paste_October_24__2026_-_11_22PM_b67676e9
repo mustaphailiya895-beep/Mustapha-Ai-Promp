@@ -1,0 +1,697 @@
+MUSTAPHA AI PROMPT
+
+UNIVERSAL MASTER PROMPT TRANSFORMATION ENGINE
+
+COMPLETE WEBSITE FEATURE IMPLEMENTATION SPECIFICATION
+
+You are an expert AI application architect, prompt engineer, full-stack developer, UI/UX designer, and AI workflow engineer.
+
+Your task is to build a fully functional, intelligent, universal Master Prompt Transformation feature inside my existing website, MUSTAPHA AI PROMPT.
+
+IMPORTANT: Do not create a feature that only works for one niche, one industry, one video style, or one example. This must be a genuinely universal system capable of adapting Master Prompts to almost any topic or creative, educational, professional, technical, or business use case.
+
+Do not merely explain how to build the feature. Inspect the existing project, understand its architecture, and implement the feature in the actual application while preserving existing working functionality.
+
+==================================================
+
+1. CORE PURPOSE
+   ==================================================
+
+Create a feature called:
+
+UNIVERSAL MASTER PROMPT STUDIO
+
+The feature allows a user to:
+
+1. Paste any existing Master Prompt.
+2. Enter a new Idea, topic, niche, subject, product, character, scenario, or objective.
+3. Optionally specify additional instructions.
+4. Select how they want the Master Prompt adapted.
+5. Generate a complete, revised Master Prompt that is ready to copy and use.
+6. Review the changes before accepting the result.
+7. Copy, edit, download, and save the final result.
+
+The system must understand the original Master Prompt before modifying it.
+
+It must identify which instructions depend on the original topic and which instructions are universal and should remain unchanged.
+
+It must then adapt the relevant sections to the new Idea while preserving the original prompt's useful structure, workflow, output format, constraints, and quality standards.
+
+The feature must work dynamically with unfamiliar topics. Do not rely on a predefined list of niches.
+
+==================================================
+2. UNIVERSALITY REQUIREMENT — HIGHEST PRIORITY
+
+This system must support ANY reasonable Idea or subject that the underlying AI can understand.
+
+Examples include, but are not limited to:
+
+- Video creation and video-generation prompts.
+- Image generation and image editing.
+- Animals and wildlife.
+- Dolphins, sharks, birds, cats, dogs, and other animals.
+- Water challenges, obstacle courses, sports, and adventure.
+- Cars, motorcycles, transportation, and racing.
+- Comedy, entertainment, and storytelling.
+- Anime, animation, fantasy, and fictional characters.
+- Travel, tourism, geography, and cultural experiences.
+- Food, cooking, and restaurants.
+- Education, teaching, and learning.
+- Business, marketing, and product promotion.
+- Websites, software, and programming.
+- Fashion, photography, and visual design.
+- Science, technology, and engineering.
+- History, documentaries, and educational content.
+- Music-related creative workflows.
+- Social media content, YouTube Shorts, TikTok, and Instagram Reels.
+- Professional writing, research, and productivity.
+- Any other compatible topic provided by the user.
+
+These examples are only illustrations and test cases. They are NOT a fixed list of supported categories.
+
+Never assume that the user's next Idea must belong to a previously listed category.
+
+Never force every Master Prompt into a video-generation format, image-generation format, social-media format, or any other fixed format.
+
+The original Master Prompt determines the task type, while the new Idea determines the intended subject or direction.
+
+If the user supplies a Master Prompt for software development, adapt it for the new software idea. If the user supplies an image-generation prompt, adapt it for the new image subject. If the user supplies a video prompt, adapt it for the new video concept.
+
+Automatically identify the correct task type from the supplied Master Prompt.
+
+Do not hardcode the example "Dolphin Adventure → Water Challenge" into the transformation logic.
+
+Do not prioritize any example over the user's actual input.
+
+==================================================
+3. USER INTERFACE
+
+Add a polished, modern, responsive interface to the existing MUSTAPHA AI PROMPT website.
+
+Use the existing design system, branding, authentication, navigation, and component architecture wherever possible.
+
+Create a clearly labeled section:
+
+UNIVERSAL MASTER PROMPT STUDIO
+
+Provide the following interface elements:
+
+A. ORIGINAL MASTER PROMPT
+
+A large text area where the user can paste the complete original Master Prompt.
+
+Placeholder:
+"Paste your complete original Master Prompt here..."
+
+B. NEW IDEA / TARGET TOPIC
+
+A separate text area where the user enters the Idea they want to adapt the prompt to.
+
+Placeholder:
+"Enter any new Idea, topic, niche, subject, scenario, or objective..."
+
+Examples may be displayed as optional guidance, but they must never restrict the user's input.
+
+C. ADDITIONAL INSTRUCTIONS
+
+An optional field where the user can provide extra requirements.
+
+Examples:
+
+- Preserve the original format.
+- Keep the camera instructions unchanged.
+- Adapt only the topic-specific sections.
+- Change the audience from general viewers to American viewers.
+- Maintain the same output structure.
+- Keep the final prompt in English.
+- Translate the final prompt into Hausa.
+- Improve clarity without changing the original objective.
+
+D. TRANSFORMATION MODE
+
+Provide these options:
+
+1. SMART ADAPTATION — recommended default.
+2. MINIMAL CHANGES — change only what is necessary.
+3. DEEP ADAPTATION — comprehensively adapt topic-dependent instructions.
+4. STRUCTURE PRESERVATION — preserve the original layout and section order.
+5. IMPROVE AND ADAPT — improve clarity, consistency, and quality while adapting the Idea.
+6. CUSTOM — allow additional user instructions to control the transformation.
+
+These options must modify the transformation behavior, not simply change the interface label.
+
+E. OPTIONAL SETTINGS
+
+Include configurable options where practical:
+
+- Output language.
+- Preserve original length where possible.
+- Preserve exact headings.
+- Preserve all unrelated instructions.
+- Include a change summary.
+- Show a before-and-after comparison.
+- Validate the final Master Prompt.
+- Save the result to the user's account.
+
+Do not overload the interface with unnecessary settings. Keep the experience simple and understandable.
+
+F. PRIMARY BUTTON
+
+Button text:
+
+ADAPT MY MASTER PROMPT
+
+Show a loading indicator while the operation is processing.
+
+Prevent accidental duplicate submissions.
+
+Display clear errors if required fields are missing or the AI request fails.
+
+==================================================
+4. INTELLIGENT MASTER PROMPT ANALYSIS
+
+Before transforming anything, analyze the complete original Master Prompt.
+
+Identify:
+
+1. The original task and objective.
+2. The original subject, topic, niche, or domain.
+3. The intended audience.
+4. The intended AI model or tool, if specified.
+5. The workflow and sequence of operations.
+6. The required output format.
+7. The required number of outputs or items.
+8. Character limits, word limits, and other quantitative constraints.
+9. Style, tone, language, and quality requirements.
+10. Technical specifications.
+11. Camera, image, audio, or video instructions, if relevant.
+12. Required sections and their order.
+13. Negative instructions and prohibited changes.
+14. Safety, privacy, and accuracy requirements.
+15. Reusable instructions that do not depend on the original topic.
+16. Topic-specific details that need to be adapted.
+17. Dependencies between different sections.
+18. Instructions that could conflict with the new Idea.
+
+Treat the original Master Prompt as the source of truth for its existing workflow and format unless the user explicitly requests a change.
+
+Do not assume that every original detail is topic-dependent.
+
+Do not assume that every original detail must remain unchanged.
+
+Use contextual reasoning to decide what needs to change.
+
+If a section contains a mixture of topic-specific and universal instructions, modify only the relevant parts whenever feasible.
+
+==================================================
+5. ADAPTATION LOGIC
+
+After analyzing the original Master Prompt, compare it with the new Idea.
+
+Classify the original instructions internally into these categories:
+
+A. UNIVERSAL INSTRUCTIONS
+
+Instructions that remain applicable regardless of the new Idea.
+
+Examples may include:
+
+- Output formatting.
+- Response structure.
+- Numbered stages.
+- Camera realism.
+- Language requirements.
+- Character limits.
+- Quality standards.
+- Workflow instructions.
+
+Preserve these instructions unless they conflict with the new Idea or the user explicitly asks to change them.
+
+B. TOPIC-DEPENDENT INSTRUCTIONS
+
+Instructions that refer specifically to the original subject.
+
+Examples may include:
+
+- Original animals or characters.
+- Original products or locations.
+- Original activities.
+- Topic-specific terminology.
+- Subject-specific visual details.
+- Original story events.
+- Original industry or audience.
+
+Adapt these instructions to the new Idea.
+
+C. CONTEXT-DEPENDENT INSTRUCTIONS
+
+Instructions that are valid only under certain conditions.
+
+Examples may include:
+
+- Camera movement for a video.
+- Image dimensions for an image.
+- Coding language for a programming task.
+- Ingredients for a cooking task.
+- Scientific terminology for an educational task.
+
+Keep, modify, or remove these according to the actual task.
+
+D. INCOMPATIBLE INSTRUCTIONS
+
+Instructions that cannot logically apply to the new Idea.
+
+Do not blindly retain instructions that make the resulting Master Prompt contradictory or nonsensical.
+
+Replace or remove only the incompatible portions while preserving the original objective and useful structure.
+
+E. MISSING REQUIREMENTS
+
+If the new Idea requires an important detail that the original Master Prompt does not contain, determine whether the detail can reasonably be inferred.
+
+Do not invent specific facts that could materially mislead the user.
+
+If an assumption is necessary, use a sensible default when appropriate and document it in the change summary.
+
+Ask a clarifying question only when the missing information is essential and cannot reasonably be inferred.
+
+Do not interrupt the user with unnecessary questions.
+
+==================================================
+6. PRESERVE THE ORIGINAL WORKFLOW
+
+The original Master Prompt may contain a complex multi-stage workflow.
+
+For example, it may instruct the AI to:
+
+- Generate a specific number of ideas first.
+- Wait for the user to select an idea.
+- Produce a detailed final prompt afterward.
+- Generate titles, captions, and hashtags.
+- Follow strict formatting.
+- Produce JSON, code, tables, reports, or other structured output.
+
+Preserve the original workflow unless the new Idea makes a particular step genuinely incompatible or the user explicitly requests a change.
+
+Do not replace a complex workflow with a generic one-paragraph prompt.
+
+Do not automatically add a 10-idea stage to prompts that do not contain one.
+
+Do not automatically impose video prompt character limits on image, software, business, educational, or other tasks.
+
+Do not impose a 1495-character requirement unless the original Master Prompt or the user's new instructions require it.
+
+Preserve all relevant quantities, limits, formatting requirements, and conditional instructions.
+
+If the original workflow has Stage 1 and Stage 2, keep both stages and their original behavior unless a change is necessary.
+
+==================================================
+7. COMPLETE MASTER PROMPT OUTPUT
+
+The final result must be a COMPLETE, SELF-CONTAINED MASTER PROMPT.
+
+It must not be merely:
+
+- A list of suggested edits.
+- A summary of the original prompt.
+- A short explanation.
+- A partial replacement section.
+- A template with unexplained placeholders.
+- Instructions telling the user to combine multiple fragments manually.
+
+The user should be able to copy the final output and use it directly in the intended AI tool.
+
+Preserve the original prompt's relevant sections, instructions, constraints, examples, formatting, and workflow.
+
+Replace topic-specific content consistently throughout the entire document.
+
+Check headings, examples, negative instructions, character descriptions, locations, output labels, and any other topic-dependent references.
+
+Avoid leaving behind obsolete references to the old Idea unless they are intentionally retained as comparative examples or background information.
+
+If the user requests a different output language, translate the prompt while preserving technical terminology and the intended meaning.
+
+By default, keep the original Master Prompt's language.
+
+==================================================
+8. PROTECT ORIGINAL CONTENT AND STRUCTURE
+
+Never overwrite the user's original Master Prompt.
+
+Store or maintain the original input separately from the generated result.
+
+Use an internal transformation workflow:
+
+STEP 1: Read the complete original prompt.
+
+STEP 2: Build an internal outline of its sections, instructions, and dependencies.
+
+STEP 3: Identify the new Idea and its requirements.
+
+STEP 4: Map old topic-dependent details to the new topic.
+
+STEP 5: Generate proposed changes for relevant sections.
+
+STEP 6: Reassemble the complete Master Prompt in its original logical order.
+
+STEP 7: Compare the result against the original structure.
+
+STEP 8: Validate the final output for consistency, completeness, and contradictions.
+
+STEP 9: Display the complete result and a summary of significant changes.
+
+Where practical, preserve unchanged text verbatim instead of unnecessarily rewriting it.
+
+Use a structured representation internally when useful, but show the user the complete readable Master Prompt.
+
+Do not expose hidden reasoning or private internal chain-of-thought. Provide concise explanations and a useful change summary instead.
+
+==================================================
+9. QUALITY VALIDATION
+
+Before displaying the final Master Prompt, run a validation pass.
+
+Check:
+
+- Is the new Idea correctly represented throughout the document?
+- Does the output still perform the original task?
+- Have unrelated instructions been unnecessarily changed?
+- Are the original workflow stages preserved?
+- Are required sections missing?
+- Are there contradictions between sections?
+- Are old topic references accidentally left behind?
+- Are all output quantities and character limits preserved where applicable?
+- Are technical instructions relevant to the actual task?
+- Does the result remain self-contained?
+- Can the user copy and use it directly?
+- Are examples clearly distinguished from mandatory instructions?
+- Does the prompt avoid unsupported factual assumptions?
+- Is the result free from accidental duplication?
+- Does the prompt respect applicable safety and privacy requirements?
+
+If a problem is found, correct it before displaying the final result.
+
+Do not claim that exact character counts, technical behavior, or factual details have been verified unless they were actually checked.
+
+If an exact character limit is required, count the final prompt using code where feasible and make corrections until the specified limit is satisfied.
+
+If exact preservation of a section cannot be guaranteed, show the relevant change in the comparison view rather than claiming that the text is unchanged.
+
+==================================================
+10. RESULTS INTERFACE
+
+After successful generation, display:
+
+A. COMPLETE FINAL MASTER PROMPT
+
+Show the entire generated Master Prompt in a large, readable editor.
+
+Include:
+
+- Copy Full Prompt.
+- Edit Result.
+- Download as TXT.
+- Save to My Prompts.
+- Regenerate.
+- Start New Adaptation.
+
+B. CHANGE SUMMARY
+
+Provide a concise explanation of:
+
+- Which topic-dependent sections changed.
+- Which important instructions were preserved.
+- Which incompatible instructions were adjusted.
+- Any assumptions made.
+- Any limitations discovered during validation.
+
+C. BEFORE-AND-AFTER COMPARISON
+
+When enabled, show the original and transformed sections side by side or with highlighted changes.
+
+Clearly distinguish:
+
+- Added content.
+- Modified content.
+- Removed content.
+- Unchanged content.
+
+Do not falsely label rewritten text as unchanged.
+
+D. VALIDATION STATUS
+
+Display a simple validation summary, such as:
+
+- Structure checked.
+- Required sections checked.
+- Topic consistency checked.
+- Contradictions checked.
+- Quantitative constraints checked when applicable.
+
+Do not show a successful status for a check that has not actually run.
+
+==================================================
+11. USER EXPERIENCE AND ACCESSIBILITY
+
+The feature must be easy to use on:
+
+- Android phones.
+- iPhones.
+- Tablets.
+- Desktop computers.
+
+Requirements:
+
+- Responsive layout.
+- Clear labels.
+- Readable text.
+- Large touch-friendly buttons.
+- Appropriate loading states.
+- Useful error messages.
+- Accessible contrast.
+- Keyboard accessibility.
+- Copy confirmation.
+- Preservation of the user's text when a request fails.
+- No unnecessary page reloads.
+- No accidental loss of unsaved work.
+
+Support English and Hausa if the existing application supports multilingual interfaces.
+
+The final Master Prompt should use the language selected by the user, or the original prompt's language by default.
+
+==================================================
+12. AI INTEGRATION
+
+Use the actual AI integration already configured in the MUSTAPHA AI PROMPT project if it is available and suitable.
+
+Inspect the current codebase before introducing a new integration.
+
+If the project uses Google AI Studio or Gemini, use the supported SDK and the model configuration available to the application.
+
+Do not hardcode a model name without checking the existing project configuration.
+
+Do not simulate AI output with a static example.
+
+Do not return fake successful results.
+
+Do not replace real model calls with placeholder text.
+
+Use structured outputs internally where helpful, followed by validation and assembly of the final prompt.
+
+Handle:
+
+- Network errors.
+- Rate limits.
+- Invalid responses.
+- Empty responses.
+- Authentication errors.
+- Oversized prompts.
+- Malformed structured output.
+- Interrupted generation.
+
+If the request fails, preserve the user's original input and provide a clear retry option.
+
+For large Master Prompts, use a suitable context window, input-size checks, and a reliable strategy for preserving all relevant sections. Never silently truncate the original prompt.
+
+==================================================
+13. SECURITY AND FIREBASE
+
+Inspect the existing Firebase configuration and authentication implementation.
+
+Integrate with the existing project instead of unnecessarily rebuilding it.
+
+If users can save prompts, use Firebase according to the project's existing architecture.
+
+Where appropriate:
+
+- Store saved prompts under the authenticated user's identity.
+- Keep original prompts and generated versions separate.
+- Restrict access so users can read and modify only their own private records.
+- Validate data on the server.
+- Apply appropriate Firebase Security Rules.
+- Avoid exposing secret API keys in client-side code.
+- Use secure server-side functions or the existing trusted backend for secret-bearing operations.
+- Avoid storing unnecessary sensitive information.
+- Do not expose one user's private prompts to another user.
+
+Do not claim Firebase is correctly configured unless the configuration has actually been inspected and tested.
+
+Do not disable existing authentication or security controls to make the feature appear to work.
+
+==================================================
+14. DATA MODEL
+
+Use a data model suitable for the existing project.
+
+A saved transformation may include:
+
+- Document ID.
+- User ID.
+- Original Master Prompt.
+- New Idea.
+- Additional Instructions.
+- Transformation Mode.
+- Output Language.
+- Final Master Prompt.
+- Change Summary.
+- Validation Results.
+- Creation Timestamp.
+- Last Updated Timestamp.
+
+Do not require users to save a prompt if they only want to generate and copy it.
+
+Follow the project's existing database conventions.
+
+==================================================
+15. EXAMPLES MUST NEVER LIMIT THE SYSTEM
+
+Use different examples during development and testing to verify that the transformation engine is genuinely universal.
+
+Example A:
+Original topic: Dolphin adventure.
+New Idea: Water obstacle challenge.
+
+Example B:
+Original topic: Wildlife documentary.
+New Idea: Electric vehicle review.
+
+Example C:
+Original topic: Image generation.
+New Idea: Anime character design.
+
+Example D:
+Original topic: Social media marketing.
+New Idea: Educational science content.
+
+Example E:
+Original topic: Website development.
+New Idea: A recipe-sharing application.
+
+Example F:
+Original topic: Travel video.
+New Idea: Historical documentary.
+
+These are test cases only.
+
+The application must also accept topics that are not represented in these examples.
+
+Never make these examples mandatory.
+Never restrict the input to a dropdown of predefined niches.
+Never automatically classify every request as a video challenge.
+Never include these examples in the user's final Master Prompt unless they are relevant to the user's actual request.
+
+==================================================
+16. TESTING REQUIREMENTS
+
+Test the implementation using different original Master Prompts with substantially different structures and purposes.
+
+Test cases should include:
+
+1. A long, multi-stage video-generation Master Prompt.
+2. An image-generation Master Prompt with detailed visual requirements.
+3. A software-development Master Prompt.
+4. A business or marketing Master Prompt.
+5. An educational Master Prompt.
+6. A Master Prompt with exact character limits.
+7. A Master Prompt with many sections and negative instructions.
+8. A prompt whose new Idea requires some original instructions to be removed.
+9. A prompt whose new Idea requires only minimal changes.
+10. A prompt using a topic not included in any example above.
+
+Verify that:
+
+- The system does not hardcode one niche.
+- The original input remains unchanged.
+- The output is complete.
+- Relevant instructions are preserved.
+- Topic-specific details are consistently updated.
+- Incompatible instructions are handled appropriately.
+- Errors do not erase user input.
+- Copying and saving work correctly.
+- Users cannot access another user's private saved prompts.
+
+Fix implementation defects found during testing.
+
+If an integration cannot be tested because credentials or external services are unavailable, clearly identify the limitation instead of pretending the test passed.
+
+==================================================
+17. IMPLEMENTATION RULES
+
+Before coding:
+
+1. Inspect the existing application.
+2. Identify its framework, components, AI integration, Firebase setup, and design conventions.
+3. Determine how to integrate the feature with minimal disruption.
+4. Reuse existing components where appropriate.
+
+During implementation:
+
+1. Build the complete interface.
+2. Connect it to the actual AI service.
+3. Implement the transformation workflow.
+4. Add validation and error handling.
+5. Integrate saving and history where supported.
+6. Preserve existing website functionality.
+7. Avoid unnecessary dependencies and duplicated components.
+
+After implementation:
+
+1. Run available checks and tests.
+2. Resolve errors introduced by the changes.
+3. Verify responsive behavior where tools allow.
+4. Confirm which features are implemented and tested.
+5. Clearly disclose anything that still requires configuration.
+
+Do not merely produce a plan, mockup, or code snippet when the environment allows you to implement the actual feature.
+
+==================================================
+18. FINAL ACCEPTANCE CRITERIA
+
+The implementation is acceptable only when the following core behaviors are supported:
+
+- A user can paste an arbitrary original Master Prompt.
+- A user can enter an arbitrary new Idea.
+- The application identifies the task type from the original prompt.
+- The application adapts relevant topic-dependent content.
+- The application preserves unrelated instructions wherever feasible.
+- The application preserves the original workflow unless changes are necessary.
+- The application returns a complete, self-contained final Master Prompt.
+- The user can review, copy, and edit the result.
+- The original input is not overwritten.
+- The application handles errors without losing the user's work.
+- The implementation does not depend on a predefined niche list.
+- The application does not treat the examples in this specification as restrictions.
+- The feature integrates with the existing MUSTAPHA AI PROMPT application.
+- The system does not falsely claim successful implementation or validation.
+
+FINAL INSTRUCTION:
+
+Implement the Universal Master Prompt Studio inside the existing MUSTAPHA AI PROMPT website.
+
+Prioritize universal adaptability, faithful preservation of the original Master Prompt, consistent topic replacement, complete final output, real AI integration, user control, and reliable validation.
+
+The user's actual original Master Prompt and new Idea must always take precedence over the examples in this specification.
+
+Do not hardcode a single niche.
+
+Build the feature so that it can intelligently adapt many different kinds of Master Prompts to many different kinds of Ideas.
